@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ReelVision — Social Reels for Brands</title>
+  <link rel="icon" type="image/x-icon" href="src/favicon.ico">
+  <style>
+    :root{--blue:#145cc6;--dark:#070707;--cream:#f5f5f5;--max:1200px}
+    *{box-sizing:border-box}
+    body{margin:0;font-family: Georgia, 'Times New Roman', serif;color:#111;background:#fff}
+    header{background:var(--dark);color:#fff;padding:28px 40px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-size:22px;letter-spacing:1px}
+    nav a{color:#ddd;margin-left:22px;text-decoration:none}
+    .button{
+      background: var(--blue);
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex; /* makes button only as wide as text */
+      width: auto;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.3s ease;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;}
+    .btn-purple-gecko {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 22px;
+      background: linear-gradient(135deg, #7C3AED, #6366F1);
+      color: #fff;
+      border: none;
+      border-radius: 14px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-purple-gecko:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(100, 63, 255, 0.35);
+    }
+
+    .btn-purple-gecko .text {
+      position: relative;
+      z-index: 1;
+    }
+ 
+    .button .text{font-weight:600}
+    .button .svg{display:flex;align-items:center}
+
+    .hero{min-height:62vh;background:#000 url('/mnt/data/Screenshot%202025-11-14%20122724.png') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 24px}
+    .hero .wrap{max-width:900px}
+    .hero h1{font-size:84px;margin:0 0 18px;color:#fff;letter-spacing:1px}
+    .hero p{color:#ddd;max-width:760px;margin:0 auto 26px;line-height:1.8}
+
+    .section{padding:64px 28px}
+    .container{max-width:var(--max);margin:0 auto}
+
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+    .about h2{font-size:48px;margin:0 0 22px}
+    .about p{line-height:1.8;color:#222}
+    .about .cta{display:inline-block;margin-top:18px}
+
+    .services{background:var(--blue);color:#fff}
+    .services h2{font-size:48px;margin-top:0}
+    .services p{max-width:560px}
+
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+    .gallery img{width:100%;height:240px;object-fit:cover;display:block}
+
+    footer{background:#111;color:#eee;padding:28px 20px;text-align:center}
+    footer .social-links a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 4px;
+      font-weight: 500;
+    }
+
+    footer .social-links a:hover {
+      text-decoration: underline;
+      opacity: 0.9;
+    }
+
+    .follow-text {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 15px;
+      color: #eee;
+      opacity: 0.9;
+    }
+
+    .social-icons {
+      margin-top: 8px;
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .social-icons a {
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      width: 26px;
+      height: 26px;
+      opacity: 0.85;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .social-icons a:hover {
+      opacity: 1;
+      transform: scale(1.15);
+    }
+
+    .social-icons svg {
+      width: 100%;
+      height: 100%;
+    }
+    
+
+
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero h1{font-size:44px}
+      .two-col{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .gallery img{height:160px}
+      .gallery video{height:auto}
+    }
+    @media (max-width:480px){
+      header{padding:14px}
+      .brand{font-size:18px}
+      nav a{display:none}
+      .hero{padding:48px 16px}
+      .hero h1{font-size:34px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">ReelVision</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a class="btn" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Elevate Your Brand</h1>
+      <p>We here at ReelVision create short, high-impact social media reels that grab attention and drive conversions. From creative concept to final cut — we handle everything so your brand looks unforgettable on Instagram, Facebook, and YouTube.</p>
+      <a class="btn-purple-gecko" href="#contact">
+        <span class="text">Let's Talk</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container two-col about">
+      <div>
+        <h2>About ReelVision</h2>
+        <p>ReelVision is a creative advertising studio focused on producing engaging short-form video for social platforms. Our team blends storytelling, motion design and performance data to craft reels that build awareness, engagement and sales for products and services.</p>
+        <a class="button" href="#contact">
+          <span class="text">Contact</span>
+        </a>
+      </div>
+      <div>
+        <img src="src/ReelVision.png" alt="ReelVision img" style="width:100%;border-radius:6px;box-shadow:0 6px 20px rgba(0,0,0,.2)">
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section services">
+    <div class="container two-col">
+      <div style="padding:36px">
+        <h2>Services</h2>
+        <p>ReelVision provides end-to-end reel production crafted to elevate your brand on social media. Our team combines creative direction, filming, editing, and motion design to deliver reels that not only look polished but also perform. Every project is shaped by strategy and storytelling, ensuring your content stays engaging, relevant, and optimized for maximum reach across platforms.</p>
+        <a class="button" href="#work" style="background:#fff;color:var(--blue);">
+          <span class="text">Explore Reels</span>
+        </a>
+      </div>
+      <div style="padding:36px;display:flex;align-items:center;justify-content:center">
+        <img src="src/Services_demo-1.png" alt="Services_1" style="width:100%;max-width:300px;box-shadow:0 6px 20px rgba(0,0,0,.2)">
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="section">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:28px"><h2 style="font-size:36px">Recent Work</h2></div>
+      <div class="gallery">
+        <video src="src/Work_demo-1.mp4" alt="work 1" style="width:100%;object-fit:cover;display:block" autoplay muted loop controls></video>
+        <video src="src/Work_demo-2.mp4" alt="work 2" style="width:100%;object-fit:cover;display:block" autoplay muted loop controls></video>
+        <video src="src/Work_demo-3.mp4" alt="work 3" style="width:100%;object-fit:cover;display:block" autoplay muted loop controls></video>
+        <video src="src/Work_demo-4.mp4" alt="work 4" style="width:100%;object-fit:cover;display:block" autoplay muted loop controls></video>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section" style="background:var(--cream)">
+    <div class="container" style="max-width:760px;margin:auto">
+      <h1 style="text-align:center;margin-bottom:14px">Get in touch</h1>
+      <p style="text-align:center;color:#444;margin-bottom:18px">Tell us about your project and we'll reply within 2-3 business day.</p>
+            <form style="display:grid;gap:12px" action="https://formspree.io/f/xovyjnob" method="POST">
+        <input name="name" placeholder="Name" style="padding:12px;border:1px solid #ccc;border-radius:6px;font-size:16px" required>
+        <input name="email" placeholder="Email" type="email" style="padding:12px;border:1px solid #ccc;border-radius:6px;font-size:16px" required>
+        <textarea name="message" placeholder="Project details" rows="5" style="padding:12px;border:1px solid #ccc;border-radius:6px;font-size:16px" required></textarea>
+        <div style="text-align:right">
+          <button class="button" type="submit">
+            <span class="text">Send Message</span>
+            <span class="svg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="20" viewBox="0 0 38 15" fill="none">
+                <path fill="white" d="M10 7.519l-.939-.344h0l.939.344zm14.386-1.205l-.981-.192.981.192zm1.276 5.509l.537.843.148-.094.107-.139-.792-.611zm4.819-4.304l-.385-.923h0l.385.923zm7.227.707a1 1 0 0 0 0-1.414L31.343.448a1 1 0 0 0-1.414 0 1 1 0 0 0 0 1.414l5.657 5.657-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364zM1 7.519l.554.833.029-.019.094-.061.361-.23 1.277-.77c1.054-.609 2.397-1.32 3.629-1.787.617-.234 1.17-.392 1.623-.455.477-.066.707-.008.788.034.025.013.031.021.039.034a.56.56 0 0 1 .058.235c.029.327-.047.906-.39 1.842l1.878.689c.383-1.044.571-1.949.505-2.705-.072-.815-.45-1.493-1.16-1.865-.627-.329-1.358-.332-1.993-.244-.659.092-1.367.305-2.056.566-1.381.523-2.833 1.297-3.921 1.925l-1.341.808-.385.245-.104.068-.028.018c-.011.007-.011.007.543.84zm8.061-.344c-.198.54-.328 1.038-.36 1.484-.032.441.024.94.325 1.364.319.45.786.64 1.21.697.403.054.824-.001 1.21-.09.775-.179 1.694-.566 2.633-1.014l3.023-1.554c2.115-1.122 4.107-2.168 5.476-2.524.329-.086.573-.117.742-.115s.195.038.161.014c-.15-.105.085-.139-.076.685l1.963.384c.192-.98.152-2.083-.74-2.707-.405-.283-.868-.37-1.28-.376s-.849.069-1.274.179c-1.65.43-3.888 1.621-5.909 2.693l-2.948 1.517c-.92.439-1.673.743-2.221.87-.276.064-.429.065-.492.057-.043-.006.066.003.155.127.07.099.024.131.038-.063.014-.187.078-.49.243-.94l-1.878-.689zm14.343-1.053c-.361 1.844-.474 3.185-.413 4.161.059.95.294 1.72.811 2.215.567.544 1.242.546 1.664.459a2.34 2.34 0 0 0 .502-.167l.15-.076.049-.028.018-.011c.013-.008.013-.008-.524-.852l-.536-.844.019-.012c-.038.018-.064.027-.084.032-.037.008.053-.013.125.056.021.02-.151-.135-.198-.895-.046-.734.034-1.887.38-3.652l-1.963-.384zm2.257 5.701l.791.611.024-.031.08-.101.311-.377 1.093-1.213c.922-.954 2.005-1.894 2.904-2.27l-.771-1.846c-1.31.547-2.637 1.758-3.572 2.725l-1.184 1.314-.341.414-.093.117-.025.032c-.01.013-.01.013.781.624zm5.204-3.381c.989-.413 1.791-.42 2.697-.307.871.108 2.083.385 3.437.385v-2c-1.197 0-2.041-.226-3.19-.369-1.114-.139-2.297-.146-3.715.447l.771 1.846z"></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- <footer>
+    <div class="container">© <strong>ReelVision</strong> — Short-form video for social. Follow us on Instagram • Facebook • YouTube</div>
+  </footer> -->
+
+<footer>
+  <div class="container">
+    © <strong>ReelVision</strong> — Short-form video for social.
+
+    <div class="follow-text">Follow us at</div>
+
+    <div class="social-icons">
+
+      <a href="https://instagram.com/YOUR_HANDLE" target="_blank" aria-label="Instagram">
+        <!-- Instagram Icon -->
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 
+          0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2a3 3 0 0 1 
+          3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 
+          3-3h10zm-5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 
+          1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5z"/>
+        </svg>
+      </a>
+
+      <a href="https://facebook.com/YOUR_HANDLE" target="_blank" aria-label="Facebook">
+        <!-- Facebook Icon -->
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5a3.5 
+          3.5 0 0 1 3.7-3.9c.75 0 1.55.13 1.55.13v2.1h-.87c-.86 
+          0-1.13.54-1.13 1.1V12H17l-.5 3h-2.3v7A10 10 0 0 0 22 12"/>
+        </svg>
+      </a>
+
+      <a href="https://youtube.com/YOUR_HANDLE" target="_blank" aria-label="YouTube">
+        <!-- YouTube Icon -->
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.7-.8-2.1-.9C15.8 
+          5 12 5 12 5h-.1s-3.8 0-6.9.1c-.4 0-1.3 0-2.1.9-.6.6-.8 
+          2-.8 2S2 9.6 2 11.3v1.3c0 1.7.2 3.3.2 3.3s.2 1.4.8 
+          2c.8.8 1.9.8 2.4.9 1.8.2 7.5.2 7.5.2s3.8 0 6.9-.1c.4 
+          0 1.3 0 2.1-.9.6-.6.8-2 .8-2s.2-1.6.2-3.3v-1.3c0-1.7-.2-3.3-.2-3.3zM10 
+          14.7V9.3l5.2 2.7L10 14.7z"/>
+        </svg>
+      </a>
+
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
